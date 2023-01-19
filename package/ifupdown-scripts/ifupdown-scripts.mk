@@ -42,6 +42,14 @@ define IFUPDOWN_SCRIPTS_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 -D $(IFUPDOWN_SCRIPTS_PKGDIR)/nfs_check \
 		$(TARGET_DIR)/etc/network/nfs_check
 	$(call SYSTEM_RSYNC,$(IFUPDOWN_SCRIPTS_PKGDIR)/network,$(TARGET_DIR)/etc/network)
+	$(INSTALL) -m 0755 -D $(IFUPDOWN_SCRIPTS_PKGDIR)/bridge.sh \
+		$(TARGET_DIR)/var/lib/ifupdown-bridge/bridge.sh
+	ln -s /var/lib/ifupdown-bridge/bridge.sh \
+		$(TARGET_DIR)/etc/network/if-pre-up.d/bridge
+	ln -s /var/lib/ifupdown-bridge/bridge.sh \
+		$(TARGET_DIR)/etc/network/if-down.d/bridge
+	ln -s /var/lib/ifupdown-bridge/bridge.sh \
+		$(TARGET_DIR)/etc/network/if-post-down.d/bridge
 endef
 
 define IFUPDOWN_SCRIPTS_INSTALL_INIT_OPENRC
