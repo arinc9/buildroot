@@ -1,0 +1,4 @@
+"arinc9"	Cleartext-Password := "password"
+		Tunnel-Type = VLAN,
+		Tunnel-Medium-Type = IEEE-802,
+		Tunnel-Private-Group-ID = 3
