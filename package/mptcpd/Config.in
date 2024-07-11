@@ -1,0 +1,9 @@
+config BR2_PACKAGE_MPTCPD
+	bool "mptcpd"
+        select BR2_PACKAGE_LIBELL
+	select BR2_PACKAGE_ARGP_STANDALONE \
+		if BR2_TOOLCHAIN_USES_UCLIBC || BR2_TOOLCHAIN_USES_MUSL
+	help
+	  mptcpd
+
+	  https://github.com/multipath-tcp/mptcpd

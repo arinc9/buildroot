@@ -1,0 +1,6 @@
+config BR2_PACKAGE_LIBELL
+	bool "libell"
+	help
+	  Embedded Linux library
+
+	  https://git.kernel.org/pub/scm/libs/ell/ell.git
