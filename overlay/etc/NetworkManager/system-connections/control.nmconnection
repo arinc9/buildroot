@@ -1,0 +1,17 @@
+[connection]
+id=control
+uuid=1d2aa864-4e9e-4c0a-aac9-f50664796c36
+type=ethernet
+interface-name=lan3
+
+[ethernet]
+
+[ipv4]
+address1=192.168.4.1/24
+method=manual
+
+[ipv6]
+addr-gen-mode=default
+method=auto
+
+[proxy]

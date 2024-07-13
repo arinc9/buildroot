@@ -1,0 +1,17 @@
+[connection]
+id=fibre
+uuid=0916fcca-3b8f-4104-98e1-848e4f837b1d
+type=ethernet
+interface-name=eth1
+mptcp-flags=1
+
+[ethernet]
+
+[ipv4]
+method=auto
+
+[ipv6]
+addr-gen-mode=default
+method=auto
+
+[proxy]
